@@ -64,7 +64,8 @@ const useWeather = () => {
   };
   useEffect(() => {
     setLoading({
-      loading: true,
+      ...loading,
+      state: true,
       message: "Finding location...",
     });
     if (selectedLocation.latitude && selectedLocation.longitude) {
