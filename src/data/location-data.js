@@ -82,16 +82,12 @@ function getLocationByName(location) {
   if (filtered.length > 0) {
     return filtered[0];
   } else {
-    // {
-    //   filtered.length > 0 &&
-    //     toast.error("Your searching location is not Available");
-    // }
-    const defaultLocation = {
-      location: "",
-      longitude: 0,
-      latitude: 0,
-    };
-    return defaultLocation;
+    // const defaultLocation = {
+    //   location: "",
+    //   longitude: 0,
+    //   latitude: 0,
+    // };
+    return null;
   }
 }
 

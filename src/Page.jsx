@@ -14,7 +14,7 @@ import ThunderStormImage from "./assets/backgrounds/thunderstorm.jpg";
 import WinterImage from "./assets/backgrounds/winter.jpg";
 const Page = () => {
   const { loading, weatherData } = useContext(WeatherContext);
-  console.log(weatherData);
+  // console.log(weatherData);
   const [climateImage, setClimateImage] = useState("");
   function getBackgroundImage(climate) {
     switch (climate) {

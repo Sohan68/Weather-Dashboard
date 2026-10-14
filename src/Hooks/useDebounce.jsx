@@ -12,7 +12,7 @@ const useDebounce = (callback, delay) => {
 
   const debounceCallback = (...args) => {
     if (timeoutIdRef.current) {
-      clearInterval(timeoutIdRef.current);
+      clearTimeout(timeoutIdRef.current);
     }
     timeoutIdRef.current = setTimeout(() => {
       callback(...args);

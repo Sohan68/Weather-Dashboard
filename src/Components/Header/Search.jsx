@@ -1,4 +1,5 @@
 import { useContext } from "react";
+import { toast } from "react-toastify";
 import searchIcon from "../../assets/search.svg";
 import { LocationContext } from "../../Context/Index";
 import { getLocationByName } from "../../data/location-data";
@@ -7,8 +8,13 @@ const Search = () => {
   // const [searchTerm, setSearchTerm] = useState([]);
   const { setSelectedLocation } = useContext(LocationContext);
   const doSearch = useDebounce((term) => {
+    if (!term) return;
     const fetchedLocation = getLocationByName(term);
-    setSelectedLocation({ ...fetchedLocation });
+    if (fetchedLocation) {
+      setSelectedLocation({ ...fetchedLocation });
+    } else {
+      toast.error(`"${term}" location is not available`);
+    }
   }, 500);
 
   const handleChange = (e) => {
