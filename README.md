@@ -444,6 +444,11 @@ If you intend to publish or distribute this project as open source, add a `LICEN
 - **GitHub** — https://github.com/
 - **Vercel** — https://vercel.com/
 
+- **Project Credit**
+  Project: Weather Dashboard
+  Type: React + Vite Frontend Project
+  Purpose: Real-time weather forecasting, geolocation handling, and favorite locations management
+
 📌 Project Status
 Status: Active Development 🚧
 
